@@ -1,30 +1,265 @@
 :root {
   --header-color: #354e41;
+  --article-background: #f8f8ff;
+  --category-orange: #d28161;
+  --category-green: #354e41;
+  --category-text: #f7f6fc;
+  --gradient-start: #1b6f8c;
+  --gradient-end: #68a398;
+  --recent-link: #5f211b;
+  --article-tag: #929293;
+  --article-border: rgba(226, 226, 226, 0.167);
+  --article-header-font: Arial; /* 'Alegreya Sans SC' */
+  --article-p-font: 'Arial Narrow'; /* 'Source Serif Pro' */
+  --article-footer-font: Arial; /* 'Source Serif Pro' */
+  --page-header-font: Arial; /* 'Alegreya Sans SC' */
+  --footer-font: Arial; /*'Source Serif Pro' */
 }
 
-.center {
-  border: 5px solid;
+/***** Page Layout *****/
+
+.page-box {
+  /* Used as a parent container to center
+     all of the content on the page */
+  width: 100%;
+  height: auto;
   display: flex;
+  align-items: center;
   justify-content: center;
 }
 
+.header-box {
+  /* Used to separate the page into the
+     header, body, and footer */
+  width: 55%;
+  min-width: 1000px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+}
+
+/***** Main Article *****/
+
 .header {
+  /* Styling for the 'Read what's new' header */
   color: var(--header-color);
+  font-family: var(--page-header-font);
+  font-size: 35px;
+  margin: 0px;
+}
+
+.main-art-box {
+  /* Parent container for the main article
+     at the top of the page */
+  width: 100%;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+  margin: 0px;
+}
+
+.main-art-sub-box {
+  /* Container for the text of the main article */
+  width: 50%;
+  height: 100%;
+  border: 1px solid;
+  border-color: var(--article-border);
+  border-radius: 5px;
+  position: relative;
+  z-index: 2;
+  top: 25%;
+  background-image: linear-gradient(var(--gradient-start), var(--gradient-end));
+  padding: 20px;
+  margin: 0px;
+}
+
+.img-box {
+  /* Container for the main article image */
+  width: 55%;
+  height: 100%;
+  min-height: 300px;
+  position: relative;
+  left: 45%;
+  bottom: 35%;
+}
+
+.main-art-box img {
+  /* Styling for the main article image */
+  width: 100%;
+  height: 100%;
+  position: relative;
+  bottom: 10%;
+}
+
+.main-art-header {
+  /* Styling for the title of the main article: 'LIGHTS. CAMERA. ACTION!' */
+  font-family: var(--article-header-font);
+  font-size: 25px;
+  margin: 2em 0em 0em 0em;
+  font-style: bold;
+  color: var(--category-text);
+}
+
+.main-art-footer {
+  /* Styling for the main article footer: 'By Edward Chen | 05/27/21' */
+  color: var(--article-tag);
+  font-size: 17px;
+  font-family: var(--article-footer-font);
+  position: relative;
+  top: 25%;
+  padding-top: 7px;
+}
+
+.main-art-sub-box p {
+  /* Styling for the article preview for the main article */
+  color: white;
+}
+
+/***** Article Box *****/
+
+.article-box-container {
+  /* Container for the 3 sub articles */
+  display: flex;
+  justify-content: space-between;
+
 }
 
 .article-box {
+  /* Container for the sub articles */
+  background-color: var(--article-background);
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
   border-radius: 5px;
-  max-width: 205px;
+  width: 300px;
+  max-width: 33%;
+  padding: 3px;
+  border: 1px solid;
+  border-color: var(--article-border);
+  border-radius: 5px;
 }
 
 .article-box:hover {
+  /* Hover animation for each of the sub articles */
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
+/***** Article Box Elements *****/
+
 .article-box img {
+  /* Styling for the image in the sub articles */
   margin: auto;
-  width: 97%;
-  height: 75px;
+  width: 100%;
+}
+
+.article-box-text {
+  /* Cotainer for all of the text in the sub articles */
+  margin: 10px;
+}
+
+.article-box p {
+  /* Styling for the article preview in the sub articles.
+     NOTE: As far as I am aware, standard CSS ellipsis only allows
+     for one line to be displayed before the elipsis */
+  height: 20px;
+  width: 98%;
+  float: left;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-family: var(--article-p-font);
+}
+
+.article-box h6 {
+  /* Styling for the 'ARTICLE' tag in the top right of the sub articles */
+  display: inline;
+  padding-left: 62%;
+  color: var(--article-tag);
+}
+
+.art-header {
+  /* Styling for the header of the sub articles: 'LIGHTS. CAMERA. ACTION!' */
+  font-family: var(--article-header-font);
+  font-size: 15px;
+  margin: 2em 0em 0em 0em;
+}
+
+/***** Category tag *****/
+
+.main-cat {
+  /* Styling for the category tag for the main article: 'chemistry' */
+  width: 11%;
+  border-radius: 5px;
+  padding: 6px 3px 3px 3px;
+  color: var(--category-text);
+  font-size: 12px;
+  text-align: center;
+  display: inline;
+  float: left;
+}
+
+.category {
+  /* Styling for the sub article category tags */
+  width: 15%;
+  border-radius: 5px;
+  padding: 6px 3px 3px 3px;
+  color: var(--category-text);
+  font-size: 11px;
+  text-align: center;
+  display: inline;
+  float: left;
+}
+
+.biology {
+  /* Color for the biology category tag */
+  background-color: var(--category-orange);
+}
+
+.chemistry {
+  /* Color for the chemistry category tag */
+  background-color: var(--category-orange);
+}
+
+.geology {
+  /* Color for the geology category tag */
+  background-color:  var(--category-green);
+}
+
+/***** Article footer *****/
+
+.article-box-footer {
+  /* Cotainer for the footer for the sub articles */
+  color: var(--article-tag);
+  font-size: 14px;
+  font-family: var(--article-footer-font);
+}
+
+.art-auth {
+  /* Styling for the sub article's author name:  'By Edward Chen' */
+  display: inline;
+}
+
+.date {
+  /* Styling for the sub article's date: '05/27/21' */
+  display: inline;
+  padding-left: 110px;
+}
+
+/***** Footer *****/
+
+.footer {
+  /* Container for the page footer: 'Read all recent' */
+  display: flex;
+  justify-content: right;
+  margin-top: 20px;
+}
+
+.recent {
+  /* Styling for the 'Read all recent' link */
+  margin: 5px;
+  color: var(--recent-link);
+  text-decoration: underline;
+  font-family: var(--footer-font);
 }
