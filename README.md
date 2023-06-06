@@ -1,7 +1,7 @@
 # SciQuel-Sample
 Title: SciQuel Coding Sample\
 Description: A website made to look like the 'Website Example.png'
-that is located in '/static/images/Website Example.png' using
+that is located in '/static/images/Website_Example.png' using
 only using standard HTML and CSS.
 
 NOTES:\
@@ -19,7 +19,7 @@ Email: reidcam@umich.edu
 Last Modified: 6/6/2023
 
 Screenshot of finished replica from 6/6/2023:\
-![replica](/static/images/Website Example.png)
-
-Image that was being replicated ('Website Example.png'):\
 ![finished](/static/images/Finished_Screenshot.png)
+
+Image that was being replicated ('Website_Example.png'):\
+![replica](/static/images/Website_Example.png)
