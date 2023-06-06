@@ -13,7 +13,7 @@ NOTES:
     5. Colors were obtained using an online color picker to get colors from 'Website Example.png.'
     6. All classes in 'style.css' have comments saying what they are used for.
 
-Author: Cameron Reid
+Author: Cameron Reid\
 Email: reidcam@umich.edu
 
 Last Modified: 6/6/2023
