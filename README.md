@@ -17,3 +17,9 @@ Author: Cameron Reid\
 Email: reidcam@umich.edu
 
 Last Modified: 6/6/2023
+
+Screenshot of finished replica from 6/6/2023:\
+![replica](/static/images/Website Example.png)
+
+Image that was being replicated ('Website Example.png'):\
+![finished](/static/images/Finished_Screenshot.png)
